@@ -1,5 +1,6 @@
 fun main(args: Array<String>) {
-   println("Solutions to 8,9, and 10")
+   println("Solutions to 8,9, 10, 14, 15, 16")
+    // 249 Lexemes
 }
 
 fun validateEmail(email: String): Boolean {
@@ -42,3 +43,27 @@ fun validateIntegerNumber(number: String): Boolean {
     return validInteger.matches(number)
 }
 
+fun validateEvenChars(string: String): Boolean {
+    print("Enter a string: ");
+    val validString = Regex("^(a|b)*a?(a|b)*c?(c|d)*d?(c|d)*\$")
+
+    val input = readLine() ?: ""
+    if (validString.matches(input)) {
+        println("String is valid")
+    } else {
+        println("String is invalid")
+    }
+    return validString.matches(string)
+}
+fun validateMultilineComment(string: String): Boolean {
+    print("Enter a string: ");
+    val validString = Regex("^/\\*([\\s\\S]*?)\\*/\$")
+
+    val input = readLine() ?: ""
+    if (validString.matches(input)) {
+        println("String is valid")
+    } else {
+        println("String is invalid")
+    }
+    return validString.matches(string)
+}
